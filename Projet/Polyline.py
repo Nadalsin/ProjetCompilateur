@@ -2,7 +2,13 @@ class Polygon:
     """class for storing values of Polyline parsed by the parser"""
 
     def __init__(self):
-        self.points = []
+        self.lines = []
 
-    def setPoints(self, pointsList):
-        self.points = pointsList
+    def setPoints(self, linesList):
+        self.lines = linesList
+
+    def c_code(self):
+        code = ""
+        for p in self.lines:
+            code += p.c_code()
+        return code

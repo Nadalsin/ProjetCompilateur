@@ -6,3 +6,6 @@ class Line:
         self.y1 = y1
         self.x2 = x2
         self.y2 = y2
+
+    def c_code(self):
+        return "droite("+", "+self.x1+", "+self.y1+", "+self.x2+", "+self.y2+");"

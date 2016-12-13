@@ -8,3 +8,6 @@ class Rectangle:
         self.ry = ry
         self.width = width
         self.height = height
+
+    def c_code(self):
+        return "rectangle("+self.x+", "+self.y+", "+(self.x+self.width)+", "+(self.y+self.height)+");"

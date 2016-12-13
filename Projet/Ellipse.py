@@ -6,3 +6,6 @@ class Ellipse:
         self.cy = cy
         self.rx = rx
         self.ry = ry
+
+    def c_code(self):
+        return "on verra après"

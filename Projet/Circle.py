@@ -5,3 +5,7 @@ class Circle:
         self.cx = cx
         self.cy = cy
         self.r = r
+
+    def c_code(self):
+        return "cercle("+self.cx+", "+self.cy+", "+self.r+");"
+
