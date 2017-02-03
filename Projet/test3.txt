@@ -3,4 +3,6 @@
     <ellipse cx="200" cy="80" rx="100" ry="50" />
     <line x1="0" y1="0" x2="200" y2="200" />
     <rect x="50" y="20" width="150" height="150" />
+    <polyline points="200,10 250,190 160,210" />
+    <polygon points="150,10 225,175 14,21" />
 </svg>

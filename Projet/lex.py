@@ -1,7 +1,7 @@
 import ply.lex as lex
 
 tokens = (
-    'DEBUT_PROGRAMME', 'FIN_PROGRAMME', 'FIN_LIGNE', 'DEBUT_LIGNE', 'TEXTE', "ATTRIBUT", 'EGAL',"VALEUR"
+    'DEBUT_PROGRAMME', 'FIN_PROGRAMME', 'FIN_LIGNE', 'DEBUT_LIGNE', 'TEXTE', 'EGAL',"VALEUR", "GUILLEMET"
 )
 
 def t_DEBUT_PROGRAMME(t):
@@ -26,13 +26,16 @@ def t_DEBUT_LIGNE(t):
         return t
 
 def t_TEXTE(t):
-        r'[A-Za-z]+'
+        r'[A-Za-z]+\d?'
         return t
 
+def t_GUILLEMET(t):
+    r'\"'
+    return t
+
 def t_VALEUR(t):
-        r'\"\d+\.?\d*[A-Za-z]*\"'
+        r'(\d+([,.]\d*)*\s?)+'
         t.value = t.value.replace('"','')
-        t.value = t.value.replace('px', '')
         return t
 
 t_ignore = ' \n /'
